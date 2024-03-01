@@ -1,27 +1,20 @@
+
 package com.mycompany.poo;
 
-public class POO {
-    
-    public static void main(String[] args) {
-        Character homero = new Character("Homero","Inspector de Seguridad", 38, "A la grande le puse cuca");
-        homero.greeting();
-        Character bart = new Character("Bartolomeo", "Estudiante", 10, "Ay Caramba");
-        bart.greeting();
-    }
-    static class Character{
-        String name;
+public class simpson {
+    String name;
         String occupation;
         int age;
         String phrase;
         
         /*Constructor*/
-        public Character(String name, String occupation, int age, String phrase) {
+        public simpson(String name, String occupation, int age, String phrase) {
             this.name = name;
             this.occupation = occupation;
             this.age = age;
             this.phrase = phrase;
         }
-        public Character(){
+        public simpson(){
             
         }
         /*Getters and Setters*/
@@ -52,7 +45,4 @@ public class POO {
         void greeting(){
             System.out.println(this.phrase);
         }
-        
-        
-    }
 }
