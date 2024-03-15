@@ -2,44 +2,50 @@
 package books;
 
 public class Person {
-    String Name;
+    int id;
     int books[] = {0,0,0};
-    int date[];
 
-    public Person(String Name) {
-        this.Name = Name;
+    public Person(int id) {
+        this.id = id;
     }
     
     public Person(){
         
     }
     
-    public String getName() {
-        return Name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(int id) {
+        this.id = id;
     }
     
-    public boolean pedirLibro(int code, int quantity){
+    public boolean pedirLibro(int code){
         boolean x = false;
         for(int i=0; i<3;i++){
-            if(i==books[i]){
+            if(0==books[i]){
                 x = true;
                 this.books[i]=code;
             }
         }
         return x;
     }
-    public void entregarLibro(int code, int quantity){
+    public boolean entregarLibro(int code){
         boolean x = false;
         for(int i=0; i<3;i++){
-            if(i!=books[i]){
+            if(books[i]==code){
                 x = true;
                 this.books[i]=0;
             }
         }
         return x;
+    }
+    public void antecedentes(){
+        for(int i = 0; i<books.length;i++){
+            if(books[i]!=0){
+                System.out.println("La persona tiene el libro "+books[i]);
+            }
+        }
     }
 }

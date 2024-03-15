@@ -6,7 +6,7 @@ public class Book {
     int id;
     int quantity;
     String genre;
-    String[] datos = new String[15];
+    int[] datos = new int[15];
     
     
     public Book(String title, int id, int quantity, String genre) {
@@ -55,14 +55,14 @@ public class Book {
     public boolean disponibility(){
         return 0!=quantity;
     }
-    public void pedirLibro(String name, int quantity){
+    public void pedirLibro(int name, int quantity){
         this.datos[quantity-1] = name; 
         
     }
-    public void entregarLibro(String name, int quantity){
-        for(String i:datos){
+    public void entregarLibro(int name, int quantity){
+        for(int i:datos){
             if(i==name){
-                this.datos[quantity-1] = "";
+                this.datos[quantity-1] = 0;
             }
             
         }
