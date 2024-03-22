@@ -16,17 +16,17 @@ public class People {
     public People(){
         
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public CustomerRole getRole() {
+        return role;
+    }
     
     
-    private void sayMenu(){
-        
-    }
-    public void buyFood(){
-        
-    }
-    public void cancelMenu(){
-        
-    }
+    
     public void sellFood(){
         if(this.role != CustomerRole.ADMINISTRATIVE){
             System.out.println("Solo administrativos pueden vender comida");

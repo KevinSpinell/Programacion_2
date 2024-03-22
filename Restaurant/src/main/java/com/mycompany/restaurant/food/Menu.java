@@ -1,8 +1,9 @@
 
 package com.mycompany.restaurant.food;
-
 import com.mycompany.restaurant.values.DishType;
-import java.util.ArrayList;
+import com.mycompany.restaurant.people.Clients;
+import com.mycompany.restaurant.people.People;
+import java.util.*;
 
 public class Menu {
     
@@ -20,13 +21,15 @@ public class Menu {
     public void addDish(Dish dish){
         this.dishlist.add(dish);
     }
-    public ArrayList<Dish> getDishesType(DishType dishType){
-        ArrayList<Dish> foundDishes = new ArrayList<>();
-        for(Dish dish: dishlist){
-            if(dish.getType() == dishType){
-                foundDishes.add(dish);
+    public ArrayList<String> getDishesPerType(DishType dishType,Clients peoplelist, String id){
+        ArrayList<String> foundDishes=new ArrayList<>();
+        for(Dish dish:dishlist){
+            if(dish.getType()==dishType){
+                foundDishes.add(" |"+dish.getName() +" : "+ dish.getIngredients()+" "+dish.getPrice(peoplelist.getPricePerRole(id))+"\n");
             }
         }
+        
         return foundDishes;
+        
     }
 }

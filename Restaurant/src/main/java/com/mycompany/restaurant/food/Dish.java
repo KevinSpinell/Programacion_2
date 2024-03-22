@@ -22,7 +22,22 @@ public class Dish {
         return this.type;
     }
 
+    public int getPrice(double desc) {
+        return (int) Math.ceil(price*desc);
+    }
     
+
+    public String getName() {
+        return name;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
 
     
     
